@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import jwt from 'jsonwebtoken';
 
- const SECRET_KEY = "jwtsecret"
+ const SECRET_KEY = "jwtsecret" // not using .env since i ran into some trouble while setting up the env
 
 export function verifyToken(req: Request) {
   const token = req.headers.get('Authorization')?.split(' ')[1];
